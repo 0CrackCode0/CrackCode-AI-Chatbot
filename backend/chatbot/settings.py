@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-qb3@8e*e6@*$r7mt569+7-^bw&s(jkb^at=m-u079ii!n!aqjs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['crackcode-ai-chatbot.onrender.com', 'localhost', '127.0.0.1']
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
