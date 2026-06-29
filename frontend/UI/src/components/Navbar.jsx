@@ -1,21 +1,45 @@
-export default function Navbar({ selectedChat }) {
+export default function Navbar({
+
+    selectedChat,
+    setSidebarOpen
+
+}) {
+
     return (
-        <div className="border-bottom p-3 bg-white d-flex align-items-center justify-content-between shadow-sm">
-            <div className="d-flex align-items-center gap-2">
+
+        <div className="navbar-custom">
+
+            <div className="d-flex align-items-center">
+
+                <button
+                    className="btn btn-light d-lg-none me-3"
+                    onClick={() => setSidebarOpen(true)}
+                >
+                    <i className="bi bi-list fs-4"></i>
+                </button>
+
                 <span className="fw-bold fs-5">
-                    <span style={{ color: "#dc3545" }}>C</span>rack
-                    <span style={{ color: "#dc3545" }}>C</span>ode
+
+                    <span className="text-danger">C</span>rack
+
+                    <span className="text-danger">C</span>ode
+
                 </span>
 
                 {selectedChat && (
-                    <>
-                        <span className="text-muted">|</span>
-                        <span className="text-muted small">
-                            Chat #{selectedChat.id}
-                        </span>
-                    </>
+
+                    <span className="ms-3 text-muted">
+
+                        Chat #{selectedChat.id}
+
+                    </span>
+
                 )}
+
             </div>
+
         </div>
+
     );
+
 }
