@@ -17,7 +17,6 @@ export default function Login() {
         setLoading(true);
 
         try {
-
             const response = await api.post("/login/", {
                 username,
                 password
@@ -36,22 +35,16 @@ export default function Login() {
     };
 
     return (
-        <div className="vh-100 d-flex justify-content-center align-items-center bg-light">
+        <div className="login-page">
 
-            <div className="card shadow-lg p-4" style={{ width: "420px" }}>
+            <div className="login-card">
 
-                <h2 className="text-center mb-3 fw-bold">
-                    <span style={{ color: "#dc3545", textShadow: "0 0 10px rgba(220,53,69,0.5)" }}>
-                        C
-                    </span>
-                    rack
-                    <span style={{ color: "#dc3545", textShadow: "0 0 10px rgba(220,53,69,0.5)" }}>
-                        C
-                    </span>
-                    ode
+                <h2 className="login-title">
+                    <span className="text-danger">C</span>rack
+                    <span className="text-danger">C</span>ode
                 </h2>
 
-                <p className="text-center text-muted small mb-4">
+                <p className="login-subtitle">
                     Making every day productive
                 </p>
 
@@ -89,22 +82,19 @@ export default function Login() {
 
                 </form>
 
-                <p className="text-center mt-3 small text-muted">
+                <p className="login-footer">
 
                     Don't have an account?{" "}
-                    <Link to="/register">
-                        Register
-                    </Link>
+                    <Link to="/register">Register</Link>
 
                     <br />
 
-                    <span>
+                    <span className="developer">
                         Designed & Developed by{" "}
                         <a
                             href="https://www.linkedin.com/in/0abdulahad0"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-decoration-none"
                         >
                             Abdul Ahad
                         </a>
